@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+  ></script>
+    <title>Weather Dashboard</title>
+</head>
+<body>
+  <header>
+    <h1 class="text-center col-12 border bg-primary text-white">Weather Dashboard</h1>
+  </header>
+  <div class="row m-1">
+  <div class="col-3 bg-light">
+    <h2 class=" font-weight-bold">Search for a City:</h2>
+    <form class=" border-bottom mb-5 border-secondary">
+      <label for="searchbox"></label>
+      <input type="text" class="form-control mb-3" id="searchbox" aria-describedby="emailHelp" placeholder="Seattle">
+      <button type="submit" class="btn btn-primary col-12 mb-3">Submit</button>
+    </form>
+      <div class="card h-25 bg-secondary">
+        <div class="card-body text-center h4 p-1">
+          Austin
+        </div>
+      </div>
+  </div>
+  <div class="col-9 border border-dark">
+    <h1 id="currentcity">Atlanta <span id="currentdate">(11/29/2021)</span></h1>
+  </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="./js/script.js"></script>
+</html>
