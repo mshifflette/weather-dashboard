@@ -1,41 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-  ></script>
-    <title>Weather Dashboard</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  <title>Weather Dashboard</title>
 </head>
+
 <body>
   <header>
     <h1 class="text-center col-12 border bg-primary text-white">Weather Dashboard</h1>
   </header>
-  <div class="row m-1">
-  <div class="col-3 bg-light">
-    <h2 class=" font-weight-bold">Search for a City:</h2>
-    <form class=" border-bottom mb-5 border-secondary">
-      <label for="searchbox"></label>
-      <input type="text" class="form-control mb-3" id="searchbox" aria-describedby="emailHelp" placeholder="Seattle">
-      <button type="submit" class="btn btn-primary col-12 mb-3">Submit</button>
-    </form>
-      <div class="card h-25 bg-secondary">
+
+  <div class="d-flex">
+    <div class="width-2 bg-light col-3 ">
+      <h2 class=" font-weight-bold">Search for a City:</h2>
+      <form class=" border-bottom mb-5 border-secondary" id="searchForm">
+        <label for="searchbar"></label>
+        <input type="text" class="form-control mb-3" id="searchbar" aria-describedby="emailHelp" placeholder="Seattle">
+        <button type="submit" class="btn btn-primary col-12 mb-3">Submit</button>
+      </form>
+      <div class="card bg-secondary">
         <div class="card-body text-center h4 p-1">
           Austin
         </div>
       </div>
+
+    </div>
+    <section id="weather">
+      <div class="col-9 border border-dark">
+        <div class="">
+          <h1 id="currentCity">Atlanta <span id="currentDay">(11/29/2021)</h1>
+          <h4 id="currentTemp"></h4>
+          <h4 id="currentWind"></h4>
+          <h4 id="currentHumidity"></h4>
+          <h4><span id="currentUV"></h4>
+        </div>
+      </div>
+  <div class="col-md-9 ">
+    <h1>5 Day Forecast:</h1>
+    <div class="d-flex">
+      <div class="card mx-4" style="width: 18rem;">
+        <div class="card-body p-1">
+          <div id="date1"></div>
+          <div id="temp1"></div>
+          <div id="wind1"></div>
+          <div id="humid1"></div>
+        </div>
+      </div>
+      <div class="card mx-4" style="width: 18rem;">
+        <div class="card-body  p-1">
+          <div id="date2"></div>
+          <div id="temp2"></div>
+          <div id="wind2"></div>
+          <div id="humid2"></div>
+        </div>
+      </div>
+      <div class="card mx-4" style="width: 18rem;">
+        <div class="card-body  p-1">
+          <div id="date3"></div>
+          <div id="temp3"></div>
+          <div id="wind3"></div>
+          <div id="humid3"></div>
+        </div>
+      </div>
+      <div class="card mx-4" style="width: 18rem;">
+        <div class="card-body  p-1">
+          <div id="date4"></div>
+          <div id="temp4"></div>
+          <div id="wind4"></div>
+          <div id="humid4"></div>
+        </div>
+      </div>
+      <div class="card mx-4" style="width: 18rem;">
+        <div class="card-body  p-1">
+          <div id="date5"></div>
+          <div id="temp5"></div>
+          <div id="wind5"></div>
+          <div id="humid5"></div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-9 border border-dark">
-    <h1 id="currentcity">Atlanta <span id="currentdate">(11/29/2021)</span></h1>
-  </div>
-</div>
+  </section>
 </body>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="./js/script.js"></script>
+
 </html>
