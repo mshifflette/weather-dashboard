@@ -79,7 +79,7 @@ function getCityInfo() {
         var lat = data.coord.lat;
         
         var getWeatherInfo2 = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&exclude=minutely,hourly,alerts&appid=" + APIkey;
-            fetch(getWeatherInfo2)  //use lat and lon to get 5 day weather info and place into els
+            fetch(getWeatherInfo2)  
                 .then(function (response) {
                     return response.json();
                 }) 
